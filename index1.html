@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+
+<head>
+    <meta charset="utf-8">
+    <title>form</title>
+    <style>
+        h1 {
+            color: blue;
+            font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+        }
+
+        body {
+            font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+            background-image: url('b.jfif');
+
+        }
+
+        .erreur {
+            color: rgb(221, 61, 61);
+            display: none;
+        }
+
+        #myTable {
+            display: none;
+            width: fit-content;
+        }
+
+        #up {
+            display: none;
+        }
+
+        #btn {
+            display: block;
+        }
+    </style>
+</head>
+
+<body>
+
+    <form method="post">
+        <h1>Form Validation</h1>
+        <h3>First name :</h3>
+        <h5 id="er1" class="erreur">First name must be alphabetic!</h5>
+        <input type="text" id="f_name">
+        <h3>Last name :</h3>
+        <h5 id="er2" class="erreur">Last name must be alphabetic!</h5>
+        <input type="text" id="l_name">
+        <h3>Email :</h3>
+        <h5 id="er3" class="erreur">Email must be valid !</h5>
+        <input type="email" id="email">
+        <h3>Phone :</h3>
+        <h5 id="er4" class="erreur">Phone number must be 8 digits</h5>
+        <input type="number" id="num">
+        <h3>Password :</h3>
+        <h5 id="er5" class="erreur">Password should contain uppercase, lowercase, special characters and a numbers !
+        </h5>
+        <input type="password" id="psw1">
+        <h3>Confirm your password :</h3>
+        <h5 id="er6" class="erreur">Confirmation password can't be different from pasword</h5>
+        <input type="password" id="psw2">
+        <h3>Gender :</h3>
+        <h5 id="er7" class="erreur">You must choose your gender</h5>
+        Male <input type="radio" name="g" value="Male" id="m">
+        Female<input type="radio" name="g" value="Female" id="f">
+        <h3>Date of birth</h3>
+        <h5 id="er8" class="erreur">You must be +18 !</h5>
+        <input type="date" id="birth"><br><br>
+        <input type="button" onclick="test()" id="btn" value="Submit">
+
+        <!-- update the user data button  -->
+        <input type="button" onclick="upd()" id="up" value="Submit">
+        <div id="t_rows">
+
+        </div>
+    </form>
+    <br><br>
+    <table border="2" cellspacing="1" id="myTable">
+        <tr>
+            <th>First name</th>
+            <th>Last name</th>
+            <th>Email</th>
+            <th>Phone</th>
+            <th>Password</th>
+            <th>Gender</th>
+            <th>Date of birth</th>
+
+        </tr>
+
+    </table>
+    <script src="test1.js"></script>
+</body>
+
+</html>
